@@ -5,11 +5,11 @@ from sklearn.ensemble import IsolationForest
 import matplotlib.pyplot as plt
 import joblib
 
-# Path to the .zip file
+# Path to the zip file
 zip_path = r"C:\Users\nrebe\Downloads\Data Science\dataSet_IoT_Based_Environmental_Dataset.zip"
 extract_path = r"C:\Users\nrebe\Downloads\Data Science\iot_data_extracted"
 
-# Extract the .zip file
+# Extract the zip file
 with zipfile.ZipFile(zip_path, 'r') as zip_ref:
     zip_ref.extractall(extract_path)
 
@@ -19,7 +19,7 @@ print("Zip file successfully extracted to:", extract_path)
 files = os.listdir(extract_path)
 print("Files found:", files)
 
-# Try to load the first .csv file found
+# Try to load the first csv file found
 csv_file = [f for f in files if f.endswith('.csv')][0]
 csv_path = os.path.join(extract_path, csv_file)
 
