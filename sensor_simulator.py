@@ -2,11 +2,11 @@ import requests
 import random
 import time
 
-# URL of your Flask API
+# URL of the Flask API
 API_URL = "http://127.0.0.1:5000/predict"
 
 def simulate_sensor_data():
-    # Generate realistic random values
+    # Generate  random values
     temperature = round(random.uniform(15.0, 35.0), 2)
     humidity = round(random.uniform(20.0, 95.0), 2)
     noise = round(random.uniform(40.0, 90.0), 2)
@@ -34,5 +34,5 @@ while True:
     except Exception as e:
         print(f"Error sending data: {e}")
 
-    # Wait before sending the next reading
+    # Wait time before sending the next reading
     time.sleep(2)
